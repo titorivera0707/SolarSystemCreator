@@ -53,7 +53,10 @@ public class SolarSystem{
 
     @Override
     public String toString(){
-        return "The name of this solar system is "+solSystemName+"\n"+sol.toString()+for(String x: planetList)System.out.println(x);
+        String forString = "";
+        for(Planet x: planetList)forString += x.toString();
+
+        return "The name of this solar system is "+solSystemName+".\n"+sol.toString()+forString;
     }
 
 }

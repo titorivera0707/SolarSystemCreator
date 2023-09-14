@@ -12,6 +12,7 @@ public class BigBang{
         String sunName = keyboard.nextLine();
 
         SolarSystem newSolSystem = new SolarSystem(solSysName, sunName);
+        
 
         System.out.println(newSolSystem);
             

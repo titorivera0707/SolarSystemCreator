@@ -5,7 +5,7 @@ public class Sun {
 
     private String sunName;
     private int sunAge;
-    private Random randy = new Random();
+    public Random randy = new Random(4);
 
     public Sun(){
         super();
@@ -15,7 +15,6 @@ public class Sun {
     public Sun(String sunName){
 
         super();
-        randy.setSeed(4);
         setSunName(sunName);
         setSunAge(1000000000);
 

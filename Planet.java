@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Planet{
 
-    private static Random randyPlanet = new Random();
+    public static Random randyPlanet = new Random();
     private String planetName;
     private int planetTons;
 
@@ -14,10 +14,8 @@ public class Planet{
 
     public Planet(String planetName) {
         super();
-        randyPlanet.setSeed(7);
         setPlanetName(planetName);
         setPlanetTons(10000000);
-
     }
 
     public String getPlanetName() {
@@ -32,6 +30,11 @@ public class Planet{
         return planetTons;
     }
 
+    // public boolean equals(Planet planetZero, int weightZero) {
+    //     if(firstPlan.equals(secondPlan) && firstWeight == secondWeight) return true;
+    //     else return false;
+    // }
+
     public void setPlanetTons(int planetTons) {
         planetTons += randyPlanet.nextInt(70000000);
         this.planetTons = planetTons;
@@ -39,7 +42,8 @@ public class Planet{
 
     @Override
     public String toString(){
-        return String.format("The planet named %s weighs %,d tons.\n", planetName, planetTons);
+        int planetTonsNew = planetTons;
+        return String.format("The planet named %s weighs %,d tons.\n", planetName, planetTonsNew);
     }
 
 }

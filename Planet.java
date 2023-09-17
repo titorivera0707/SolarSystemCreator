@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Planet{
 
-    public static Random randyPlanet = new Random();
+    public static Random randyPlanet = new Random(7);
     private String planetName;
     private int planetTons;
 
@@ -30,10 +30,10 @@ public class Planet{
         return planetTons;
     }
 
-    // public boolean equals(Planet planetZero, int weightZero) {
-    //     if(firstPlan.equals(secondPlan) && firstWeight == secondWeight) return true;
-    //     else return false;
-    // }
+    public boolean equals(String planetZero, String newPlanet) {
+        if(planetZero.equals(newPlanet)) return true;
+        else return false;
+    }
 
     public void setPlanetTons(int planetTons) {
         planetTons += randyPlanet.nextInt(70000000);

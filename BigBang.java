@@ -12,10 +12,26 @@ public class BigBang{
         String sunName = keyboard.nextLine();
 
         SolarSystem newSolSystem = new SolarSystem(solSysName, sunName);
-        
+        String firstPlanet = newSolSystem.getPlanet(0).toString();
+        Planet comparePlanets = new Planet();
+        boolean tester = false;
+        int counter = 1;
+
+        for(int x = 1; x < newSolSystem.getNumPlanets(); x++){
+            if(comparePlanets.equals(firstPlanet, newSolSystem.getPlanet(x).toString()) == true){
+                tester = true;
+                counter += x;
+            }
+        }
 
         System.out.println(newSolSystem);
-            
+        
+        if(tester == false){
+            System.out.println("There is no planet that matches the first planet.");
+        }
+
+        System.out.println(String.format("%s It equals planet %d in the ArrayList", firstPlanet, counter));
+
 
     }
 

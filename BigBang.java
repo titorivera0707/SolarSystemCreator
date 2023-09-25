@@ -5,18 +5,22 @@ public class BigBang{
 
     public static void main(String[] args)throws FileNotFoundException{
 
+        //Gets the information from the user.
+
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Please enter the name of the Solar System: ");
         String solSysName = keyboard.nextLine();
         System.out.println("Please eneter the name of the Sun: ");
         String sunName = keyboard.nextLine();
 
+        //Creates the SolarSystem and Planets.
         SolarSystem newSolSystem = new SolarSystem(solSysName, sunName);
         String firstPlanet = newSolSystem.getPlanet(0).toString();
         Planet comparePlanets = new Planet();
         boolean tester = false;
         int counter = 1;
 
+        //Checks if there is a planet that matches the first planet in the arrayList.
         for(int x = 1; x < newSolSystem.getNumPlanets(); x++){
             if(comparePlanets.equals(firstPlanet, newSolSystem.getPlanet(x).toString()) == true){
                 tester = true;
